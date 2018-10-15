@@ -27,9 +27,11 @@ componentDidMount() {
       usersb:function(){//receivers array
         //this is the way to range and two arrays 
         //receivers and givers in order to make it work
-        
+          var n = Math.floor(Math.random() * result.users.length-1);
+        window.alert(n);
+        for(var i=0;i<n;i++) {
         var lastuser = result.users.pop();
-        result.users.unshift(lastuser);
+        result.users.unshift(lastuser);}
         return result.users;
       }
     });
